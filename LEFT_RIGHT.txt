@@ -1,0 +1,38 @@
+
+   <div class= 'window'>
+        <div id = 'slider' >
+            <img class='sliderImg' src="./images/view1.jpg" alt=""/>
+            <img class='sliderImg' src="./images/Background.jpg" alt=""/>
+            <img class='sliderImg' src="./images/view2.jpg" alt=""/>
+            <img class='sliderImg' src="./images/Hotel.jpg" alt=""/>
+        </div>
+    </div>
+    <div class = 'buttons'> 
+    <button class="leftButton" onclick='slideLeft()'>Left</button>
+    <button class="righButton" onclick='slideRight()'>Right</button>
+    </div>
+  let pos = 0;
+  var slideLeft = () => {
+      console.log('click left');
+      const sliderElement = document.getElementById('slider');
+      console.log('sliderElement:', sliderElement);
+      if (pos <= -900) {
+        pos=0;
+      } else{
+        pos -= 300;
+      }
+      sliderElement.setAttribute(
+          'style',
+          'transform: translateX(${pos}px);transition:transform 1.5 linear; -webkit-transition:transform 0.5s);
+      }
+     }
+</body>
+<script>
+var slideRight = () =>{
+    console.log("click right");
+}
+var slideLeft = () =>{
+    console.log("click left");
+
+}
+</script>
